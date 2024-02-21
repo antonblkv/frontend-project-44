@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import readlineSync from 'readline-sync';
 
 const parityCheck = (namePlayer) => {
@@ -20,7 +20,7 @@ const parityCheck = (namePlayer) => {
     }
   }
 
-     return `Congratulations!, ${namePlayer}`;
+  return `Congratulations!, ${namePlayer}`;
 };
 
 console.log('node bin/brain-games.js.\nWelcome to the Brain Games!');
