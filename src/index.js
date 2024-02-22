@@ -4,7 +4,7 @@ export const getRandomIntInclusive = (min = 0, max = 100) => {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
 
-  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); 
+  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 };
 
 export const getNameAndWelcome = () => {
@@ -21,9 +21,7 @@ export const getOperation = (numberOperation) => {
   return operations[numberOperation];
 };
 
-export const getExpression = (value1, value2 = '', operation = '') => {
- return `${value1} ${operation} ${value2}`;
-};
+export const getExpression = (value1, value2 = '', operation = '') => `${value1} ${operation} ${value2}`;
 
 export const getExpectedResponse = () => {
   const answer = readlineSync.question('Your answer: ');
@@ -32,7 +30,7 @@ export const getExpectedResponse = () => {
 };
 
 export const getActualResponse = (value1, value2, operation) => {
- switch (operation) {
+  switch (operation) {
     case '+':
       return value1 + value2;
 
@@ -41,11 +39,13 @@ export const getActualResponse = (value1, value2, operation) => {
 
     case '*':
       return value1 * value2;
-    
+
     case '%':
       return value1 % value2;
-    
+
     default:
-      console.log("Неизвестная операция!");
- }
+      console.log('Неизвестная операция!');
+  }
+
+  return null;
 };

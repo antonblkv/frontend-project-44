@@ -1,4 +1,8 @@
-import {getNameAndWelcome, getActualResponse, getExpectedResponse, getExpression, getOperation, getRandomIntInclusive} from '../src/index.js';
+import {
+  getNameAndWelcome, getActualResponse,
+  getExpectedResponse, getExpression,
+  getOperation, getRandomIntInclusive,
+} from '../src/index.js';
 
 export default () => {
   const answerOptions = ['yes', 'no'];
@@ -15,7 +19,7 @@ export default () => {
     const expectedResponse = answerOptions.indexOf(expectedResponseString);
     const actualResponse = getActualResponse(value1, 2, operation);
 
-     if (expectedResponse === actualResponse) {
+    if (expectedResponse === actualResponse) {
       console.log('Correct!');
     } else {
       return `'${answerOptions[expectedResponse]}' is wrong answer ;(. Correct answer was '${answerOptions[actualResponse]}'. Let's try again, ${name}!`;
