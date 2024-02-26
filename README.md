@@ -8,3 +8,4 @@
 Демонстрация игры: "Калькулятор": https://asciinema.org/a/vqLIAzNA44S13NwdyzFNUnSo4
 Демонстрация игры: "НОД": https://asciinema.org/a/5X1wAulWdLPNuLyAcraBD3MDd
 Демонстрация игры: "Арифметическая прогрессия": https://asciinema.org/a/MRcmH47zwQb8dRVDNlHG3LXsX
+Демонстрация игры: "Простое ли число?": https://asciinema.org/a/jwspgwFZGZwZhhmDtdt3rkheC
