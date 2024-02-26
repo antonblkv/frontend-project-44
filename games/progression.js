@@ -26,7 +26,10 @@ const getStringWithHiddenElement = (arrayProgression, indexHiddenElement) => {
   return stringWithHiddenElement;
 };
 
-const getHideArrayElement = (arrayProgression, indexHiddenElement) => arrayProgression[indexHiddenElement];
+const getHideArrayElement = (
+  arrayProgression,
+  indexHiddenElement,
+) => arrayProgression[indexHiddenElement];
 
 export default () => {
   const name = getNameAndWelcome();
