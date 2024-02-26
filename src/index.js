@@ -21,7 +21,9 @@ export const getOperation = (numberOperation) => {
   return operations[numberOperation];
 };
 
-export const getExpression = (value1, value2 = '', operation = '') => `${value1} ${operation} ${value2}`;
+export const getExpression = (value1, value2 = '', operation = '') => {
+  return operation === '' ? `${value1} ${value2}` : `${value1} ${operation} ${value2}`;
+};
 
 export const getExpectedResponse = () => {
   const answer = readlineSync.question('Your answer: ');
