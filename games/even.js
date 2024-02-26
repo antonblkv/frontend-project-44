@@ -26,5 +26,5 @@ export default () => {
     }
   }
 
-  return `Congratulations!, ${name}`;
+  return `Congratulations, ${name}!`;
 };
