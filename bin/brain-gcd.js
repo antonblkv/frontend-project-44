@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import startGameGcd from '../games/gcd.js';
+import startGameGcd from '../src/games/gcd.js';
 
-console.log(startGameGcd());
+startGameGcd();
