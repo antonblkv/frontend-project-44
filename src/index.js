@@ -1,51 +1,23 @@
 import readlineSync from 'readline-sync';
 
-export const getRandomIntInclusive = (min = 0, max = 100) => {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-
-  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
-};
-
-export const getNameAndWelcome = () => {
+export default (gameDescription, getGameData) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
+  console.log(gameDescription);
 
-  return name;
-};
+  for (let i = 0; i < 3; i += 1) {
+    const [expression, correctResponse] = getGameData();
 
-export const getOperation = (numberOperation) => {
-  const operations = ['+', '-', '*', '%'];
+    console.log(`Question: ${expression}`);
+    const userResponse = readlineSync.question('Your answer: ');
 
-  return operations[numberOperation];
-};
-
-export const getExpression = (value1, value2 = '', operation = '') => (operation === '' ? `${value1} ${value2}` : `${value1} ${operation} ${value2}`);
-
-export const getExpectedResponse = () => {
-  const answer = readlineSync.question('Your answer: ');
-
-  return answer;
-};
-
-export const getActualResponse = (value1, value2, operation) => {
-  switch (operation) {
-    case '+':
-      return value1 + value2;
-
-    case '-':
-      return value1 - value2;
-
-    case '*':
-      return value1 * value2;
-
-    case '%':
-      return value1 % value2;
-
-    default:
-      console.log('Неизвестная операция!');
+    if (userResponse === correctResponse) {
+      console.log('Correct!');
+    } else {
+      return `'${userResponse}' is wrong answer ;(. Correct answer was '${correctResponse}'. Let's try again, ${name}!`;
+    }
   }
 
-  return null;
+  return `Congratulations, ${name}!`;
 };
