@@ -41,4 +41,4 @@ const getGameData = () => {
   return [expression, correctResponse];
 };
 
-export default () => console.log(gameEngine(gameDescription, getGameData));
+export default () => gameEngine(gameDescription, getGameData);
